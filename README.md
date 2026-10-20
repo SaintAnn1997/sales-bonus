@@ -1,3 +1,5 @@
+https://github.com/SaintAnn1997/sales-bonus
+
 # Проектная работа "Пряники"
 5 спринт, модуль JS
 
