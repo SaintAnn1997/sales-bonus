@@ -84,8 +84,6 @@ function analyzeSalesData(data, options) {
         }
     ));
 
-    console.log(sellerStats);
-
     // @TODO: Индексация продавцов и товаров для быстрого доступа
     const sellerIndex = sellerStats.reduce((result, item) => ({
         ...result,
@@ -96,9 +94,6 @@ function analyzeSalesData(data, options) {
         ...result,
         [item.sku]: item,
     }), {})
-
-    console.log(sellerIndex);
-    console.log(productIndex);
 
     // @TODO: Расчёт выручки и прибыли для каждого продавца
     data.purchase_records.forEach(record => { // Чек 
@@ -131,8 +126,6 @@ function analyzeSalesData(data, options) {
         });
 
     });
-
-    console.log(sellerIndex);
 
     // @TODO: Сортировка продавцов по прибыли
     sellerStats.sort((a, b) => b.profit - a.profit);
